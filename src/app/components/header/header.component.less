@@ -1,0 +1,159 @@
+@import '../../styles/colors.less';
+@import '../../styles/text.less';
+
+.header {
+    &__wrapper {
+        padding: 32px 24px 27px 24px;
+        border-bottom: 1px solid @border;
+
+        @media (max-width: 991px) {
+            padding: 18px 24px;
+        }
+
+        @media (max-width: 767px) {
+            padding: 20px;
+        }
+    }
+
+    &__container {
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+
+    &__logo {
+        cursor: pointer;
+
+        &-block {
+            max-height: 45px;
+
+            @media (max-width: 991px) {
+                max-height: 38px;
+            }
+
+            @media (max-width: 767px) {
+                max-height: 32px;
+            }
+        }
+
+        &-icon {
+            @media (max-width: 991px) {
+                width: 36px;
+                height: 38px;
+            }
+
+            @media (max-width: 767px) {
+                width: 28px;
+                height: 32px;
+            }
+        }
+
+        &-text {
+            user-select: none;
+            .text(700, 40px, 51px, @textBlack);
+
+            @media (max-width: 991px) {
+                .text(700, 28px, 36px, @textBlack);
+            }
+
+            @media (max-width: 767px) {
+                .text(700, 20px, 26px, @textBlack);
+            }
+        }
+    }
+
+    &__input {
+        height: 44px;
+        padding-left: 24px;
+        border-width: 1px 0px 1px 1px;
+        border-style: solid;
+        border-color: @border;
+        border-radius: 100px 0px 0px 100px;
+        .text(500, 16px, 22px, @textBlack);
+
+        &::placeholder {
+            .text(500, 16px, 22px, @textBlack);
+        }
+
+        @media (max-width:991px) {
+            height: 35px;
+        }
+
+        @media (max-width:575px) {
+            display: none;
+        }
+    }
+
+    &__button {
+        width: 56px;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: @orange;
+        border: 1px solid @border;
+        box-shadow: none;
+        border-radius: 0px 24px 24px 0px;
+
+        @media (max-width:991px) {
+            width: 40px;
+            height: 35px;
+        }
+
+        @media (max-width:575px) {
+            height: 32px;
+            border-radius: 24px;
+        }
+    }
+
+    &__catalog {
+        width: 155px;
+        height: 44px;
+        padding: 0;
+        border: 2px solid @border;
+        box-shadow: none;
+        padding-top: 0;
+        padding-bottom: 0;
+        border-radius: 24px;
+        background: @white;
+        cursor: pointer;
+        .text(500, 16px, 22px, @textBlack);
+
+        @media (max-width: 991px) {
+            width: 135px;
+            height: 35px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 767px) {
+            height: 32px;
+            line-height: 0;
+        }
+
+        &-text {
+            padding: 0 24px;
+
+            @media (max-width: 767px) {
+                padding: 0 20px;
+            }
+        }
+
+        &-divider {
+            border: 1px solid @border;
+            margin: 0 13px 0 0;
+            height: 100%;
+
+            @media (max-width: 991px) {
+                margin: 0 8px 0 0;
+            }
+        }
+
+        &-icon {
+            font-size: 18px;
+            color: @burger;
+
+            @media (max-width: 991px) {
+                font-size: 14px;
+            }
+        }
+    }
+}
