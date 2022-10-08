@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Catalog } from 'src/app/models/catalog';
 
 @Component({
   selector: 'app-header',
@@ -7,6 +8,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   visible: boolean = false;
+  catalogs: Catalog[] = [
+    {
+      img: '../../../assets/img/catalog.png',
+      title: 'Телефоны и планшеты'
+    },
+    {
+      img: '../../../assets/img/catalog.png',
+      title: 'Телефоны и планшеты'
+    },
+    {
+      img: '../../../assets/img/catalog.png',
+      title: 'Телефоны и планшеты'
+    },
+    {
+      img: '../../../assets/img/catalog.png',
+      title: 'Телефоны и планшеты'
+    },
+    {
+      img: '../../../assets/img/catalog.png',
+      title: 'Ноутбуки, моноблоки, игровые приставки'
+    },
+    {
+      img: '../../../assets/img/catalog.png',
+      title: 'Телефоны и планшеты'
+    }
+  ]
 
   constructor() { }
 
