@@ -1,5 +1,5 @@
 <div class="header__wrapper">
-    <div class="header__container">
+    <div class="container">
         <div nz-row nzAlign="bottom" [nzGutter]="{xl:24,lg:20,md:20,sm:16,xs:16}">
             <div nz-col>
                 <div nz-row nzAlign="bottom" [nzGutter]="[{xl:16,lg:8,md:8,sm:8,xs:8}]" class="header__logo">
@@ -54,13 +54,13 @@
     <ng-container *nzDrawerContent>
         <div nz-row [nzGutter]="[0,50]">
             <div nz-col nzSpan="24">
-                <div nz-row nzJustify="space-between" nzAlign="middle">
+                <div nz-row nzJustify="space-between" nzAlign="middle" style="position: relative;">
                     <svg nz-col width="19" height="18" viewBox="0 0 19 18" fill="none" (click)="close()" class="drawer__icon">
                         <path d="M17.501 0.830811L1.50098 16.6617" stroke="#1C2541" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M17.501 16.6617L1.50098 0.830811" stroke="#1C2541" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>  
-                    <div nz-col>
-                        <p class="drawer__title">Категории</p>
+                    <div nz-col class="drawer__title">
+                        <p>Категории</p>
                     </div>
                     <div nz-col>
                         <p class="drawer__clear">Сбросить</p>

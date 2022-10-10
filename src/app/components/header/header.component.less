@@ -15,11 +15,6 @@
         }
     }
 
-    &__container {
-        max-width: 1170px;
-        margin: 0 auto;
-    }
-
     &__logo {
         cursor: pointer;
 
@@ -160,10 +155,17 @@
 
 .drawer{
     &__icon{
+        position: relative;
+        z-index: 1;
         cursor: pointer;
     }
 
     &__title{
+        width: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        cursor:default;
         .text(800,20px,27px,@textBlack);
     }
 

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Catalog } from 'src/app/models/catalog';
 
 @Component({
-  selector: 'app-header',
+  selector: 'sili-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.less']
 })
