@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Catalog } from 'src/app/models/catalog';
+import { Category } from 'src/app/models/category';
+import { CategoriesService } from 'src/app/services/categories.service';
 
 @Component({
   selector: 'sili-header',
@@ -8,36 +9,12 @@ import { Catalog } from 'src/app/models/catalog';
 })
 export class HeaderComponent implements OnInit {
   visible: boolean = false;
-  catalogs: Catalog[] = [
-    {
-      img: '../../../assets/img/catalog.png',
-      title: 'Телефоны и планшеты'
-    },
-    {
-      img: '../../../assets/img/catalog.png',
-      title: 'Телефоны и планшеты'
-    },
-    {
-      img: '../../../assets/img/catalog.png',
-      title: 'Телефоны и планшеты'
-    },
-    {
-      img: '../../../assets/img/catalog.png',
-      title: 'Телефоны и планшеты'
-    },
-    {
-      img: '../../../assets/img/catalog.png',
-      title: 'Ноутбуки, моноблоки, игровые приставки'
-    },
-    {
-      img: '../../../assets/img/catalog.png',
-      title: 'Телефоны и планшеты'
-    }
-  ]
+  categories!: Category[];
 
-  constructor() { }
+  constructor(private categoriesService: CategoriesService) { }
 
   ngOnInit(): void {
+    this.categories = this.categoriesService.categories;
   }
 
   open(): void {

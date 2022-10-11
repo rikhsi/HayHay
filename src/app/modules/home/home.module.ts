@@ -7,19 +7,27 @@ import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzSkeletonModule } from 'ng-zorro-antd/skeleton';
 import { NzListModule } from 'ng-zorro-antd/list';
 import { NzImageModule } from 'ng-zorro-antd/image';
+import { CategoriesComponent } from './categories/categories.component';
+import { TitleModule } from 'src/app/shared/title/title.module';
+import { CategoryModule } from 'src/app/shared/category/category.module';
+import { SwiperModule } from 'swiper/angular';
 
 @NgModule({
   declarations: [
     HomeComponent,
-    BrandsComponent
+    BrandsComponent,
+    CategoriesComponent,
   ],
   imports: [
     CommonModule,
+    TitleModule,
+    CategoryModule,
     NzGridModule,
     NzCardModule,
     NzSkeletonModule,
     NzListModule,
-    NzImageModule
+    NzImageModule,
+    SwiperModule
   ]
 })
 export class HomeModule { }

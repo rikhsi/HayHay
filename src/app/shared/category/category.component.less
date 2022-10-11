@@ -1,0 +1,46 @@
+@import '../../styles/colors.less';
+@import '../../styles/text.less';
+
+.category{
+    width: 100%;
+    padding: 16px;
+    background: @white;
+    border: 1.09706px solid @categoryBorder;
+    border-radius: 12px;
+
+    &__img{
+        width: 100%;
+        height: 210px;
+        border-radius: 8px;
+        overflow: hidden;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+    }
+
+    &__title{
+        margin: 0;
+        height: 52px;
+        .text(700,20px,26px,@cardInfo);
+    }
+
+    &__info{
+        padding: 12px;
+        border-top: 1px solid @burger;
+        border-bottom: 1px solid @burger;
+        .text(600,16px,20px,@cardInfo);
+    }
+
+    &__button{    
+        width: auto;
+        height: auto;  
+        padding: 8px 16px;
+        border: 1px solid @purple;
+        border-radius: 50px;
+        background: inherit;
+        .text(600,14px,18px,@cardInfo);
+    }
+}

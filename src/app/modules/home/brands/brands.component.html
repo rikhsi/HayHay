@@ -1,7 +1,7 @@
 <div class="container">
     <div nz-row [nzGutter]="[0,50]">
         <div nz-col nzSpan="24">
-            <h2 class="brands__title">Искать по брендам</h2>
+            <sili-title [title]="title"></sili-title>
         </div>
         <div nz-col nzSpan="24">
             <nz-list nzGrid>
@@ -10,13 +10,29 @@
                         <nz-list-item style="margin: 0;">
                             <div class="brands__card" >
                                 <div nz-row [nzGutter]="24">
-                                    <div nz-col class="brands__card-img">
-                                        <img [src]="brand.img" alt="">
-                                    </div>
                                     <div nz-col>
-                                        <div class="brands__card-content">
-                                            <div>
-                                                //sdelay card otdelnim classom
+                                        <div class="card__img">
+                                            <img nz-image nzDisablePreview [nzSrc]="brand.img" [nzFallback]="fallback" alt="">
+                                        </div>                                    
+                                    </div>
+                                    <div nz-col nzFlex="auto">
+                                        <div class="card__content">
+                                            <div nz-row [nzGutter]="[0,8]">
+                                                <div nz-col nzSpan="24">
+                                                    <h1 class="card__title">{{brand.title}}</h1>
+                                                </div>
+                                                <div nz-col nzSpan="24">
+                                                    <div nz-row nzJustify="space-between">
+                                                        <div nz-col>
+                                                            <h2 class="card__info">{{brand.amount}} товара</h2>
+                                                        </div>
+                                                        <div nz-col>
+                                                            <svg width="21" height="14" viewBox="0 0 21 14" fill="none">
+                                                                <path d="M20.6345 7.6364C20.986 7.28493 20.986 6.71508 20.6345 6.36361L14.9069 0.63604C14.5555 0.284569 13.9856 0.284569 13.6341 0.63604C13.2827 0.987512 13.2827 1.55736 13.6341 1.90883L18.7253 7L13.6341 12.0912C13.2827 12.4426 13.2827 13.0125 13.6341 13.364C13.9856 13.7154 14.5555 13.7154 14.9069 13.364L20.6345 7.6364ZM0.713623 7.9L19.9981 7.9L19.9981 6.1L0.713623 6.1L0.713623 7.9Z" fill="#485470"/>
+                                                            </svg>                                                            
+                                                        </div>
+                                                    </div>                                                
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
