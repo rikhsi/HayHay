@@ -7,11 +7,29 @@
                         <sili-title [title]="title"></sili-title>
                     </div>
                     <div nz-col nzSpan="24">
-                        <swiper [config]="config">
-                            <ng-template swiperSlide *ngFor="let category of categories">
-                                <sili-category [category]="category"></sili-category>
-                            </ng-template>
-                        </swiper>    
+                        <div style="position: relative;">
+                            <swiper #swiper [config]="config">
+                                <ng-template swiperSlide *ngFor="let category of categories">
+                                    <sili-category [category]="category"></sili-category>
+                                </ng-template>
+                            </swiper>    
+                            <div nz-row nzJustify="space-between" nzAlign="middle" class="slide__buttons">
+                                <div nz-col>
+                                    <button nz-button nzType="primary" (click)="slidePrev()" class="slide__button slide__button-prev">
+                                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
+                                            <path d="M0.612061 13.4956L7.1077 6.99996L0.61206 0.504316" stroke="#757575" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>                              
+                                    </button>
+                                </div>  
+                                <div nz-col>
+                                    <button nz-button nzType="primary" (click)="slideNext()" class="slide__button slide__button-next">
+                                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
+                                            <path d="M0.612061 13.4956L7.1077 6.99996L0.61206 0.504316" stroke="#757575" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>                                         
+                                    </button>   
+                                </div>                                      
+                            </div>    
+                        </div>                                          
                     </div>
                 </div>
             </div>

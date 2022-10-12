@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Category } from 'src/app/models/category';
 import { CategoriesService } from 'src/app/services/categories.service';
-import SwiperCore, { Navigation, SwiperOptions } from 'swiper';
+import { SwiperOptions } from 'swiper';
+import { SwiperComponent } from 'swiper/angular';
 
 @Component({
   selector: 'sili-categories',
@@ -16,15 +17,21 @@ export class CategoriesComponent implements OnInit {
     slidesPerView: 4,
     spaceBetween: 30,
     speed: 1000,
-    navigation: true,
-    grabCursor: true
-  };
-
-  constructor(private categoriesService: CategoriesService) { 
-    SwiperCore.use([Navigation]);
+    grabCursor: true,
+    pagination:true,
   }
+
+  constructor(private categoriesService: CategoriesService) {}
 
   ngOnInit(): void {
     this.categories = this.categoriesService.categories;
+  }
+
+  @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
+  slideNext():void{
+    this.swiper?.swiperRef.slideNext(1000);
+  }
+  slidePrev():void{
+    this.swiper?.swiperRef.slidePrev(1000);
   }
 }

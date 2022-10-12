@@ -5,3 +5,35 @@
     background: @background;
     backdrop-filter: blur(25px);
 }
+
+.slide{
+    &__buttons{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__button{
+        width: 48px;
+        height: 48px;
+        position: relative;
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid @burger;
+        border-radius: 50%;
+        background: @white;
+
+        &-next{
+            margin-right: -24px;
+        }
+
+        &-prev{
+            transform: rotate(180deg);
+            margin-left: -24px;
+        }
+    }
+}
