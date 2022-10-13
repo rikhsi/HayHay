@@ -19,7 +19,7 @@ import { FormsModule } from '@angular/forms';
     NzImageModule,
     NzButtonModule,
     NzTypographyModule,
-    NzRateModule
+    NzRateModule,
   ],
   exports: [
     ProductComponent

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Category } from 'src/app/models/category';
-import { CategoriesService } from 'src/app/services/categories.service';
+import { Product } from 'src/app/models/product';
+import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
   selector: 'sili-products',
@@ -9,12 +9,19 @@ import { CategoriesService } from 'src/app/services/categories.service';
 })
 export class ProductsComponent implements OnInit {
   title:string = 'Популярные товары';
-  products!: Category[];
-  
-  constructor(private categoriesService: CategoriesService) {}
+  products!: Product[];
+  loading:boolean = false;
+  skeleton: any[] = [];
 
-  ngOnInit(): void {
-    this.products = this.categoriesService.categories;
+  constructor(private productsService: ProductsService) {
+    this.skeleton = this.skeleton.concat([...Array(12)]);
   }
 
+  ngOnInit(): void {
+    this.loading = true;
+    setTimeout(() => {
+      this.products = this.productsService.products;
+      this.loading = false;
+    }, 2000);
+  }
 }

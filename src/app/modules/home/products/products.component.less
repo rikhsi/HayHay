@@ -1,7 +1,33 @@
 @import '../../../styles/colors.less';
+@import '../../../styles/text.less';
 
 .wrapper{
     padding: 36px 0;
     background: @background;
     backdrop-filter: blur(25px);
+}
+
+.skeleton{
+    &__card{
+        width: 100%;
+        padding: 16px;
+        background: @white;
+        border: 1.09706px solid @categoryBorder;
+        border-radius: 12px;
+    }
+    &__img{
+        width: 100%;
+        height: 210px;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+}
+
+.load{
+    width: 161px;
+    height: 50px;
+    margin-top: 64px;
+    border: 2px solid @green;
+    border-radius: 28px;
+    .text(600,14px,18px,@cardInfo)
 }

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Category } from 'src/app/models/category';
+import { Product } from 'src/app/models/product';
 import { imageError } from 'src/app/services/imageError';
 
 @Component({
@@ -9,7 +9,9 @@ import { imageError } from 'src/app/services/imageError';
 })
 export class ProductComponent implements OnInit {
   fallback: string = imageError; 
-  @Input() product!: Category;
+
+  @Input() product!: Product;
+
   constructor() { }
 
   ngOnInit(): void {
