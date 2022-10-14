@@ -21,6 +21,7 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzDrawerModule } from 'ng-zorro-antd/drawer';
 import { HomeModule } from './modules/home/home.module';
+import { NzTypographyModule } from 'ng-zorro-antd/typography';
 
 registerLocaleData(en);
 
@@ -42,7 +43,8 @@ registerLocaleData(en);
     NzButtonModule,
     NzIconModule,
     NzDividerModule,
-    NzDrawerModule
+    NzDrawerModule,
+    NzTypographyModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]

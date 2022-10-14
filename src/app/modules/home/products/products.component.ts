@@ -10,18 +10,14 @@ import { ProductsService } from 'src/app/services/products.service';
 export class ProductsComponent implements OnInit {
   title:string = 'Популярные товары';
   products!: Product[];
-  loading:boolean = false;
-  skeleton: any[] = [];
+  isLoading:boolean = true;
 
-  constructor(private productsService: ProductsService) {
-    this.skeleton = this.skeleton.concat([...Array(12)]);
-  }
+  constructor(private productsService: ProductsService) {}
 
   ngOnInit(): void {
-    this.loading = true;
     setTimeout(() => {
       this.products = this.productsService.products;
-      this.loading = false;
+      this.isLoading = false;
     }, 2000);
   }
 }

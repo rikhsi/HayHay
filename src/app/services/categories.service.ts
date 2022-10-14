@@ -8,7 +8,7 @@ export class CategoriesService {
   categories: Category[] = [
     {
       img: '../../../assets/img/category.png',
-      title: 'Ноутбуки, моноблоки, игровые приставки sssssssssssss',
+      title: 'Ноутбуки, моноблоки, игровые приставки',
       amount: 1234
     },
     {

@@ -12,6 +12,7 @@ import { SwiperComponent } from 'swiper/angular';
 export class CategoriesComponent implements OnInit {
   title:string = 'Искать по категориям';
   categories!: Category[];
+  isLoading: boolean = true;
   config: SwiperOptions = {
     touchEventsTarget: 'container',
     slidesPerView: 4,
@@ -24,7 +25,11 @@ export class CategoriesComponent implements OnInit {
   constructor(private categoriesService: CategoriesService) {}
 
   ngOnInit(): void {
-    this.categories = this.categoriesService.categories;
+    setTimeout(() => {
+      this.categories = this.categoriesService.categories;
+      this.isLoading = false;
+    }, 2000);
+
   }
 
   @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;

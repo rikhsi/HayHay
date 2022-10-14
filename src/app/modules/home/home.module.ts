@@ -14,6 +14,7 @@ import { SwiperModule } from 'swiper/angular';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { ProductsComponent } from './products/products.component';
 import { ProductModule } from 'src/app/shared/product/product.module';
+import { ProductSkeletonModule } from 'src/app/shared/product-skeleton/product-skeleton.module';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ProductModule } from 'src/app/shared/product/product.module';
     TitleModule,
     CategoryModule,
     ProductModule,
+    ProductSkeletonModule,
     NzGridModule,
     NzCardModule,
     NzSkeletonModule,

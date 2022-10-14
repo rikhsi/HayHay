@@ -12,10 +12,17 @@ export class BrandsComponent implements OnInit {
   title: string = 'Искать по брендам';
   fallback: string = imageError;
   brands!:Brand[];
-
-  constructor(private brandsService: BrandsService) { }
+  skeleton: any[] = [];
+  isLoading: boolean = true;
+  
+  constructor(private brandsService: BrandsService) { 
+    this.skeleton = this.skeleton.concat([...Array(6)]);
+  }
 
   ngOnInit(): void {
-    this.brands = this.brandsService.brands;
+    setTimeout(() => {
+      this.brands = this.brandsService.brands;
+      this.isLoading = false;
+    }, 2000);
   }
 }
